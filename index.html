@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elite Consulting & Services — Book</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --muted:#9aa4b2; --glass: rgba(255,255,255,0.03);
+      --maxw:720px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:linear-gradient(180deg,#061021,#071025);color:#e6eef8;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+    .wrap{width:100%;max-width:var(--maxw);}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:12px;text-align:center}
+    .brand{display:flex;gap:12px;align-items:center;justify-content:center;flex:1 1 100%;}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:20px;margin:auto}
+    h1{font-size:22px;margin:0;text-align:center;width:100%}
+    p.lead{margin:0;color:var(--muted);font-size:13px;text-align:center;width:100%}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input[type=text], input[type=email], input[type=tel], textarea, input[type=file]{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:var(--glass);color:inherit;font-size:14px}
+    textarea{min-height:110px;resize:vertical}
+    .btns{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .btn{padding:12px;border-radius:10px;border:0;cursor:pointer;font-weight:600;text-align:center;font-size:15px}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .service-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;justify-content:center}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);cursor:pointer;font-size:14px}
+    .pill.active{background:linear-gradient(90deg,var(--accent),#2563eb);color:white;border:none}
+
+    footer{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
+
+    @media(min-width:600px){
+      .brand{flex:1 1 auto;justify-content:flex-start;text-align:left}
+      .btns{flex-direction:row}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1 id="title">Elite Consulting & Services</h1>
+          <p class="lead" id="subtitle">Rezervoni takim</p>
+        </div>
+        <button class="btn ghost" id="toggleLang" style="height:32px;margin-left:10px;">English</button>
+      </div>
+    </header>
+
+    <main class="card">
+      <p id="desc">Zgjidhni shërbimin dhe plotësoni formularin. Kur të klikoni "Dërgo", do të hapet klienti juaj i postës me të dhënat e plota.</p>
+
+      <label id="labelService">Shërbimi</label>
+      <div class="service-pills" id="servicePills">
+        <div class="pill active" data-val="real_estate">Real Estate</div>
+        <div class="pill" data-val="uk_visa">UK Visa</div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <label id="labelName">Emri</label>
+          <input type="text" id="name" placeholder="Emri Mbiemri" />
+        </div>
+        <div>
+          <label id="labelPhone">Nr. telefoni</label>
+          <input type="tel" id="phone" placeholder="+355 6xx xxx xxx" />
+        </div>
+      </div>
+
+      <label id="labelEmail">Email</label>
+      <input type="email" id="email" placeholder="" />
+
+      <label id="labelWhen">Data</label>
+      <input type="text" id="datetime" placeholder="dd/mm/yyyy - ora" />
+
+      <label id="labelMessage">Shënime</label>
+      <textarea id="message" placeholder="Shtoni informacione shtesë (p.sh. adresë prone / dokumente vize)"></textarea>
+
+      <label for="attachment">Shtoni dokumente</label>
+      <input type="file" id="attachment" multiple />
+
+      <div class="btns">
+        <button class="btn primary" id="sendBtn">Dërgo</button>
+        <button class="btn ghost" id="resetBtn">Pastro</button>
+      </div>
+
+      <footer>
+        <small id="footerText">Elite Consulting & Services — Kontakt: eliteconsultingservicesal@gmail.com — <a href="https://www.instagram.com/elite_consultingservices?igsh=N25icDQwYXdn" target="_blank" style="color:var(--accent); text-decoration:none;">Instagram</a></small>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const RECIPIENT_EMAIL = 'sadiku.sara19@gmail.com';
+    const L = {
+      sq: {title:'Elite Consulting & Services',subtitle:'Rezervoni takim',desc:'Zgjidhni shërbimin dhe plotësoni formularin. Kur të klikoni "Dërgo", do të hapet klienti juaj i postës me të dhënat e plota.',service:'Shërbimi',name:'Emri',phone:'Nr. telefoni',email:'Email',when:'Data',message:'Shënime',send:'Dërgo',reset:'Pastro',footer:'Kontakt: eliteconsultingservicesal@gmail.com'},
+      en: {title:'Elite Consulting & Services',subtitle:'Book an appointment',desc:'Choose a service and fill the form. When you click "Send" your mail client will open with the details.',service:'Service',name:'Full name',phone:'Phone',email:'Email',when:'Preferred date & time',message:'Notes',send:'Send',reset:'Reset',footer:'Contact: eliteconsultingservicesal@gmail.com'}
+    };
+
+    let currentLang = 'sq';
+
+    const title=document.getElementById('title');
+    const subtitle=document.getElementById('subtitle');
+    const desc=document.getElementById('desc');
+    const labelService=document.getElementById('labelService');
+    const labelName=document.getElementById('labelName');
+    const labelPhone=document.getElementById('labelPhone');
+    const labelEmail=document.getElementById('labelEmail');
+    const labelWhen=document.getElementById('labelWhen');
+    const labelMessage=document.getElementById('labelMessage');
+    const sendBtn=document.getElementById('sendBtn');
+    const resetBtn=document.getElementById('resetBtn');
+    const toggleLangBtn=document.getElementById('toggleLang');
+    const servicePills=document.querySelectorAll('.pill');
+
+    let selectedService = 'real_estate';
+    servicePills.forEach(p => p.addEventListener('click', ()=>{
+      servicePills.forEach(x=>x.classList.remove('active'));
+      p.classList.add('active');
+      selectedService = p.dataset.val;
+    }));
+
+    resetBtn.addEventListener('click', ()=>{
+      ['name','phone','email','datetime','message','attachment'].forEach(id => document.getElementById(id).value='');
+    });
+
+    toggleLangBtn.addEventListener('click', ()=>{
+      currentLang = currentLang === 'sq' ? 'en' : 'sq';
+      const t = L[currentLang];
+      title.textContent = t.title;
+      subtitle.textContent = t.subtitle;
+      desc.textContent = t.desc;
+      labelService.textContent = t.service;
+      labelName.textContent = t.name;
+      labelPhone.textContent = t.phone;
+      labelEmail.textContent = t.email;
+      labelWhen.textContent = t.when;
+      labelMessage.textContent = t.message;
+      sendBtn.textContent = t.send;
+      resetBtn.textContent = t.reset;
+      toggleLangBtn.textContent = currentLang==='sq' ? 'English' : 'Shqip';
+    });
+
+    sendBtn.addEventListener('click', ()=>{
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const datetime = document.getElementById('datetime').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const serviceLabel = selectedService==='real_estate' ? 'Real Estate' : 'UK Visa';
+      if(!name || !phone){ alert(currentLang==='sq' ? 'Ju lutem plotësoni emrin dhe telefonin.' : 'Please enter name and phone.'); return; }
+      const subject = encodeURIComponent('New booking: '+serviceLabel+' — '+name);
+      const bodyLines = ['Service: '+serviceLabel,'Name: '+name,'Phone: '+phone,'Email: '+email,'Preferred date/time: '+datetime,'Notes: '+message,'','Sent from: Elite Consulting & Services landing page'];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+      window.location.href=`mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
