@@ -1,338 +1,388 @@
 <!doctype html>
-<html lang="en">
+<html lang="sq">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Elite Consulting & Services — Book</title>
-<style>
-:root{
-  --bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --muted:#9aa4b2;
-  --glass: rgba(255,255,255,0.03); --maxw:720px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
-  background:linear-gradient(180deg,#061021,#071025);
-  color:#e6eef8;display:flex;align-items:center;justify-content:center;
-  min-height:100vh;padding:24px
-}
-.wrap{width:100%;max-width:var(--maxw);}
-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:12px;text-align:center}
-.brand{display:flex;gap:12px;align-items:center;justify-content:center;flex:1 1 100%;}
-.logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:20px;margin:auto}
-h1{font-size:22px;margin:0;text-align:center;width:100%}
-p.lead{margin:0;color:var(--muted);font-size:13px;text-align:center;width:100%}
-.card{
-  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius:14px;padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.6);
-  border:1px solid rgba(255,255,255,0.03)
-}
-.grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
-label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
-input[type=text], input[type=email], input[type=tel], textarea, input[type=date], select{
-  width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
-  background:var(--glass);color:inherit;font-size:14px
-}
-textarea{min-height:110px;resize:vertical}
-.btns{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-.btn{padding:12px;border-radius:10px;border:0;cursor:pointer;font-weight:600;text-align:center;font-size:15px}
-.btn.primary{background:var(--accent);color:white}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-.service-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;justify-content:center}
-.pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);cursor:pointer;font-size:14px}
-.pill.active{background:linear-gradient(90deg,var(--accent),#2563eb);color:white;border:none}
-footer{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
-@media(min-width:600px){
-  .brand{flex:1 1 auto;justify-content:flex-start;text-align:left}
-  .btns{flex-direction:row}
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elite Consulting & Services — Book</title>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#7c3aed; --muted:#9aa4b2;
+      --glass: rgba(255,255,255,0.03); --maxw:720px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
+      background:linear-gradient(180deg,#061021,#071025);
+      color:#e6eef8;display:flex;align-items:center;justify-content:center;
+      min-height:100vh;padding:24px
+    }
+    .wrap{width:100%;max-width:var(--maxw);}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:12px;text-align:center}
+    .brand{display:flex;gap:12px;align-items:center;justify-content:center;flex:1 1 100%;}
+    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:20px;margin:auto}
+    h1{font-size:22px;margin:0;text-align:center;width:100%}
+    p.lead{margin:0;color:var(--muted);font-size:13px;text-align:center;width:100%}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;padding:20px;box-shadow:0 6px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.03)
+    }
+    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
+    input[type=text], input[type=email], input[type=tel], textarea, input[type=date], select{
+      width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+      background:var(--glass);color:inherit;font-size:14px
+    }
+    textarea{min-height:110px;resize:vertical}
+    .btns{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .btn{padding:12px;border-radius:10px;border:0;cursor:pointer;font-weight:600;text-align:center;font-size:15px}
+    .btn.primary{background:var(--accent);color:white}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .service-pills{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;justify-content:center}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);cursor:pointer;font-size:14px}
+    .pill.active{background:linear-gradient(90deg,var(--accent),#2563eb);color:white;border:none}
+    footer{margin-top:12px;font-size:12px;color:var(--muted);text-align:center}
+    @media(min-width:600px){
+      .brand{flex:1 1 auto;justify-content:flex-start;text-align:left}
+      .btns{flex-direction:row}
+    }
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <div class="brand">
-      <div class="logo">E</div>
-      <div>
-        <h1 id="title">Elite Consulting & Services</h1>
-        <p class="lead" id="subtitle">Rezervoni takim</p>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <h1 id="title">Elite Consulting & Services</h1>
+          <p class="lead" id="subtitle">Rezervoni takim</p>
+        </div>
+        <button class="btn ghost" id="toggleLang" style="height:32px;margin-left:10px;">English</button>
       </div>
-      <button class="btn ghost" id="toggleLang" style="height:32px;margin-left:10px;">English</button>
-    </div>
-  </header>
+    </header>
 
-  <main class="card">
-    <p id="desc">Zgjidhni shërbimin dhe plotësoni formularin. Kur të klikoni "Dërgo", do të hapet klienti juaj i postës me të dhënat e plota.</p>
+    <main class="card">
+      <p id="desc">Zgjidhni shërbimin dhe plotësoni formularin. Kur të klikoni "Dërgo", do të hapet klienti juaj i postës me të dhënat e plota.</p>
 
-    <label id="labelService">Shërbimi</label>
-    <div class="service-pills" id="servicePills">
-      <div class="pill active" data-val="real_estate">Real Estate</div>
-      <div class="pill" data-val="uk_visa">UK Visa</div>
-    </div>
-
-    <div class="grid">
-      <div>
-        <label id="labelName">Emri</label>
-        <input type="text" id="name" placeholder="Emri Mbiemri" />
+      <label id="labelService">Shërbimi</label>
+      <div class="service-pills" id="servicePills">
+        <div class="pill active" data-val="real_estate">Real Estate</div>
+        <div class="pill" data-val="uk_visa">UK Visa</div>
       </div>
-      <div>
-        <label id="labelPhone">Nr. telefoni</label>
-        <input type="tel" id="phone" placeholder="+355 6xx xxx xxx" />
+
+      <div class="grid">
+        <div>
+          <label id="labelName">Emri</label>
+          <input type="text" id="name" placeholder="Emri Mbiemri" />
+        </div>
+        <div>
+          <label id="labelPhone">Nr. telefoni</label>
+          <input type="tel" id="phone" placeholder="+355 6xx xxx xxx" />
+        </div>
       </div>
-    </div>
 
-    <label id="labelEmail">Email</label>
-    <input
-  type="email"
-  id="email"
-  name="email"
-  placeholder="shembull@domain.com"
-  inputmode="email"
-  autocomplete="email"
-  autocapitalize="off"
-  autocorrect="off"
-  spellcheck="false"
-/>
+      <label id="labelEmail">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="email@gmail.com"
+        inputmode="email"
+        autocomplete="email"
+        autocapitalize="off"
+        autocorrect="off"
+        spellcheck="false"
+      />
 
+      <div class="grid" style="margin-top:14px">
+        <div>
+          <label id="labelDate">Data</label>
+<!-- Date native (me kalendar) -->
+<input type="date" id="date" style="display:block" />
 
-    <div class="grid" style="margin-top:14px">
-      <div>
-        <label id="labelDate">Data</label>
-        <input type="date" id="date" />
-      </div>
-      <div>
-        <label id="labelTime">Ora</label>
-        <select id="time">
-          <option value="" selected>—</option>
-        </select>
-      </div>
-    </div>
-
-    <label id="labelMessage">Shënime</label>
-    <textarea id="message" placeholder="Shtoni informacione shtesë (p.sh. adresë prone / dokumente vize)"></textarea>
-
-    <!-- Upload dokumentesh u hoq sipas kërkesës -->
-
-    <div class="btns">
-      <button class="btn primary" id="sendBtn">Dërgo</button>
-      <button class="btn ghost" id="resetBtn">Pastro</button>
-    </div>
-
-    <footer>
-      <small id="footerText">
-        Elite Consulting & Services — Kontakt: eliteconsultingservicesal@gmail.com —
-        <a href="https://www.instagram.com/elite_consultingservices?igsh=N25icDQwYXdn" target="_blank" style="color:var(--accent); text-decoration:none;">Instagram</a>
-      </small>
-    </footer>
-  </main>
+<!-- Fallback me dropdown Day/Month/Year (shfaqet vetëm kur s’mbështetet type=date) -->
+<div id="dateFallback" style="display:none; gap:8px" class="grid">
+  <select id="fbDay">
+    <option value="">Day</option>
+  </select>
+  <select id="fbMonth">
+    <option value="">Month</option>
+  </select>
+  <select id="fbYear">
+    <option value="">Year</option>
+  </select>
 </div>
+<small id="dateHint" style="color:#9aa4b2;display:block;margin-top:6px;"></small>
 
-<script>
-const RECIPIENT_EMAIL = 'sadiku.sara19@gmail.com';
+        </div>
+        <div>
+          <label id="labelTime">Ora</label>
+          <select id="time">
+            <option value="" selected>—</option>
+          </select>
+        </div>
+      </div>
 
-const L = {
-  sq: {
-    title:'Elite Consulting & Services',
-    subtitle:'Rezervoni takim',
-    desc:'Zgjidhni shërbimin dhe plotësoni formularin. Kur të klikoni "Dërgo", do të hapet klienti juaj i postës me të dhënat e plota.',
-    service:'Shërbimi',
-    name:'Emri',
-    phone:'Nr. telefoni',
-    email:'Email',
-    date:'Data',
-    time:'Ora',
-    message:'Shënime',
-    send:'Dërgo',
-    reset:'Pastro',
-    footer:'Kontakt: eliteconsultingservicesal@gmail.com',
-    pickDateFirst:'Zgjidhni më parë një datë.',
-    invalidDay:'Rezervimet lejohen vetëm nga E hëna në E shtunë.',
-    noSlotsSun:'E diel nuk ka orare të disponueshme.',
-    needNamePhone:'Ju lutem plotësoni emrin dhe telefonin.',
-    needDateTime:'Ju lutem zgjidhni datën dhe orën.'
-  },
-  en: {
-    title:'Elite Consulting & Services',
-    subtitle:'Book an appointment',
-    desc:'Choose a service and fill the form. When you click "Send" your mail client will open with the details.',
-    service:'Service',
-    name:'Full name',
-    phone:'Phone',
-    email:'Email',
-    date:'Date',
-    time:'Time',
-    message:'Notes',
-    send:'Send',
-    reset:'Reset',
-    footer:'Contact: eliteconsultingservicesal@gmail.com',
-    pickDateFirst:'Please pick a date first.',
-    invalidDay:'Bookings are allowed Monday through Saturday only.',
-    noSlotsSun:'No slots available on Sunday.',
-    needNamePhone:'Please enter name and phone.',
-    needDateTime:'Please select date and time.'
-  }
-};
+      <label id="labelMessage">Shënime</label>
+      <textarea id="message" placeholder="Shtoni informacione shtesë (p.sh. adresë prone / dokumente vize)"></textarea>
 
-let currentLang = 'sq';
+      <div class="btns">
+        <button class="btn primary" id="sendBtn">Dërgo</button>
+        <button class="btn ghost" id="resetBtn">Pastro</button>
+      </div>
 
-// UI refs
-const title=document.getElementById('title');
-const subtitle=document.getElementById('subtitle');
-const desc=document.getElementById('desc');
-const labelService=document.getElementById('labelService');
-const labelName=document.getElementById('labelName');
-const labelPhone=document.getElementById('labelPhone');
-const labelEmail=document.getElementById('labelEmail');
-const labelDate=document.getElementById('labelDate');
-const labelTime=document.getElementById('labelTime');
-const labelMessage=document.getElementById('labelMessage');
-const sendBtn=document.getElementById('sendBtn');
-const resetBtn=document.getElementById('resetBtn');
-const toggleLangBtn=document.getElementById('toggleLang');
-const servicePills=document.querySelectorAll('.pill');
-const dateInput = document.getElementById('date');
-const timeSelect = document.getElementById('time');
+      <footer>
+        <small id="footerText">
+          Elite Consulting & Services — Kontakt: eliteconsultingservicesal@gmail.com —
+          <a href="https://www.instagram.com/elite_consultingservices?igsh=N25icDQwYXdn" target="_blank" style="color:var(--accent); text-decoration:none;">Instagram</a>
+        </small>
+      </footer>
+    </main>
+  </div>
 
-let selectedService = 'real_estate';
-servicePills.forEach(p => p.addEventListener('click', ()=>{
-  servicePills.forEach(x=>x.classList.remove('active'));
-  p.classList.add('active');
-  selectedService = p.dataset.val;
-}));
+  <script>
+    const RECIPIENT_EMAIL = 'sadiku.sara19@gmail.com';
 
-// Min date = sot (në zonën lokale të përdoruesit)
-(function setMinDateToday(){
-  const today = new Date();
-  const yyyy = today.getFullYear();
-  const mm = String(today.getMonth()+1).padStart(2,'0');
-  const dd = String(today.getDate()).padStart(2,'0');
-  dateInput.min = `${yyyy}-${mm}-${dd}`;
-})();
+    // KU MBAN LISTËN E REZERVIMEVE (ndrysho sipas hostimit tënd)
+    const BOOKINGS_URL = 'bookings.json';   // p.sh. /bookings.json ose https://domain/bookings.json
+    const BOOKING_BEACON_URL = '';           // opsionale: endpoint POST për të shënuar "pending"
 
-// gjenero slot-e 30-min
-function genSlots(startH, startM, endH, endM){
-  const slots = [];
-  let h = startH, m = startM;
-  while(h < endH || (h === endH && m < endM)){
-    slots.push(`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`);
-    m += 30;
-    if(m >= 60){ m = 0; h += 1; }
-  }
-  return slots;
-}
+    const L = {
+      sq: {
+        title:'Elite Consulting & Services',
+        subtitle:'Rezervoni takim',
+        desc:'Zgjidhni shërbimin dhe plotësoni formularin. Kur të klikoni "Dërgo", do të hapet klienti juaj i postës me të dhënat e plota.',
+        service:'Shërbimi',
+        name:'Emrri Mbiemri',
+        phone:'Nr. telefoni',
+        email:'Email',
+        date:'Data',
+        time:'Ora',
+        message:'Shënime',
+        send:'Dërgo',
+        reset:'Pastro',
+        footer:'Kontakt: eliteconsultingservicesal@gmail.com',
+        pickDateFirst:'Zgjidhni më parë një datë.',
+        invalidDay:'Rezervimet lejohen vetëm nga E hëna në E shtunë.',
+        noSlotsSun:'E diel nuk ka orare të disponueshme.',
+        needNamePhone:'Ju lutem plotësoni emrin dhe telefonin.',
+        needDateTime:'Ju lutem zgjidhni datën dhe orën.',
+        noSlotsForDay:'Asnjë orar i lirë për këtë datë.'
+      },
+      en: {
+        title:'Elite Consulting & Services',
+        subtitle:'Book an appointment',
+        desc:'Choose a service and fill the form. When you click "Send" your mail client will open with the details.',
+        service:'Service',
+        name:'Full name',
+        phone:'Phone',
+        email:'Email',
+        date:'Date',
+        time:'Time',
+        message:'Notes',
+        send:'Send',
+        reset:'Reset',
+        footer:'Contact: eliteconsultingservicesal@gmail.com',
+        pickDateFirst:'Please pick a date first.',
+        invalidDay:'Bookings are allowed Monday through Saturday only.',
+        noSlotsSun:'No slots available on Sunday.',
+        needNamePhone:'Please enter name and phone.',
+        needDateTime:'Please select date and time.',
+        noSlotsForDay:'No available slots for this date.'
+      }
+    };
 
-const weekdaySlots = genSlots(19,0,21,0); // Mon–Fri 19:00–21:00
-const saturdaySlots = genSlots(9,0,16,0); // Sat 09:00–16:00
+    let currentLang = 'sq';
 
-function populateTimeOptionsFor(dateStr){
-  timeSelect.innerHTML = '<option value="" selected>—</option>';
-  if(!dateStr){ return; }
+    // ---- REFERENCA UI ----
+    const title=document.getElementById('title');
+    const subtitle=document.getElementById('subtitle');
+    const desc=document.getElementById('desc');
+    const labelService=document.getElementById('labelService');
+    const labelName=document.getElementById('labelName');
+    const labelPhone=document.getElementById('labelPhone');
+    const labelEmail=document.getElementById('labelEmail');
+    const labelDate=document.getElementById('labelDate');
+    const labelTime=document.getElementById('labelTime');
+    const labelMessage=document.getElementById('labelMessage');
+    const sendBtn=document.getElementById('sendBtn');
+    const resetBtn=document.getElementById('resetBtn');
+    const toggleLangBtn=document.getElementById('toggleLang');
+    const servicePills=document.querySelectorAll('.pill');
+    const dateInput = document.getElementById('date');
+    const timeSelect = document.getElementById('time');
 
-  const d = new Date(dateStr + 'T00:00:00');
-  const day = d.getDay(); // 0=Sun, 6=Sat
+    let selectedService = 'real_estate';
+    let bookingsCache = {}; // { 'YYYY-MM-DD': ['19:00','19:30', ...] }
 
-  if(day === 0){
-    // Sunday
-    alert(L[currentLang].noSlotsSun);
-    return;
-  }
+    // Shërbimi
+    servicePills.forEach(p => p.addEventListener('click', ()=>{
+      servicePills.forEach(x=>x.classList.remove('active'));
+      p.classList.add('active');
+      selectedService = p.dataset.val;
+    }));
 
-  const slots = (day >= 1 && day <= 5) ? weekdaySlots : (day === 6 ? saturdaySlots : []);
-  slots.forEach(t=>{
-    const opt = document.createElement('option');
-    opt.value = t; opt.textContent = t;
-    timeSelect.appendChild(opt);
-  });
-}
+    // Min date = sot
+    (function setMinDateToday(){
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth()+1).padStart(2,'0');
+      const dd = String(today.getDate()).padStart(2,'0');
+      dateInput.min = `${yyyy}-${mm}-${dd}`;
+    })();
 
-// On date change -> rifresko oraret
-dateInput.addEventListener('change', e=>{
-  populateTimeOptionsFor(e.target.value);
-});
+    // Gjenero slot-e 30-min
+    function genSlots(startH, startM, endH, endM){
+      const slots = [];
+      let h = startH, m = startM;
+      while(h < endH || (h === endH && m < endM)){
+        slots.push(`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`);
+        m += 30;
+        if(m >= 60){ m = 0; h += 1; }
+      }
+      return slots;
+    }
 
-// Reset
-resetBtn.addEventListener('click', ()=>{
-  ['name','phone','email','message'].forEach(id => document.getElementById(id).value='');
-  dateInput.value = '';
-  timeSelect.innerHTML = '<option value="" selected>—</option>';
-});
+    const weekdaySlots = genSlots(19,0,21,0); // Hënë–Premte 19:00–21:00
+    const saturdaySlots = genSlots(9,0,16,0); // Shtunë 09:00–16:00
 
-// Gjuha
-toggleLangBtn.addEventListener('click', ()=>{
-  currentLang = currentLang === 'sq' ? 'en' : 'sq';
-  const t = L[currentLang];
-  title.textContent = t.title;
-  subtitle.textContent = t.subtitle;
-  desc.textContent = t.desc;
-  labelService.textContent = t.service;
-  labelName.textContent = t.name;
-  labelPhone.textContent = t.phone;
-  labelEmail.textContent = t.email;
-  labelDate.textContent = t.date;
-  labelTime.textContent = t.time;
-  labelMessage.textContent = t.message;
-  sendBtn.textContent = t.send;
-  resetBtn.textContent = t.reset;
-  toggleLangBtn.textContent = currentLang==='sq' ? 'English' : 'Shqip';
-});
+    // Merr rezervimet (cache + fetch)
+    async function loadBookings(){
+      try{
+        const res = await fetch(BOOKINGS_URL, { cache: 'no-store' });
+        if(!res.ok) return;
+        const data = await res.json();
+        bookingsCache = data || {};
+      }catch(e){
+        bookingsCache = bookingsCache || {};
+      }
+    }
 
-// Dërgo me mailto
-sendBtn.addEventListener('click', ()=>{
-  const name = document.getElementById('name').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const dateVal = dateInput.value;
-  const timeVal = timeSelect.value;
-  const message = document.getElementById('message').value.trim();
-  const t = L[currentLang];
+    // Filtrim slot-esh sipas ditës dhe rezervimeve
+    function populateTimeOptionsFor(dateStr){
+      timeSelect.innerHTML = '<option value="" selected>—</option>';
+      if(!dateStr){ return; }
 
-  if(!name || !phone){
-    alert(t.needNamePhone); return;
-  }
-  if(!dateVal){
-    alert(t.pickDateFirst); return;
-  }
-  // Kontrollo ditën
-  const day = new Date(dateVal + 'T00:00:00').getDay();
-  if(day === 0){
-    alert(t.noSlotsSun); return;
-  }
-  if(!(day >= 1 && day <= 6)){
-    alert(t.invalidDay); return;
-  }
-  // Kontrollo orën e zgjedhur
-  if(!timeVal){
-    alert(t.needDateTime); return;
-  }
-  const allowed = (day >= 1 && day <= 5) ? weekdaySlots : saturdaySlots;
-  if(!allowed.includes(timeVal)){
-    alert(t.invalidDay); return;
-  }
+      const d = new Date(dateStr + 'T00:00:00');
+      const day = d.getDay(); // 0=Die, 6=Sht
 
-  const serviceLabel = selectedService==='real_estate' ? 'Real Estate' : 'UK Visa';
-  const subject = encodeURIComponent('New booking: '+serviceLabel+' — '+name);
+      if(day === 0){
+        alert(L[currentLang].noSlotsSun);
+        return;
+      }
 
-  // Formatim i datës në dd/mm/yyyy
-  const d = new Date(dateVal + 'T00:00:00');
-  const dd = String(d.getDate()).padStart(2,'0');
-  const mm = String(d.getMonth()+1).padStart(2,'0');
-  const yyyy = d.getFullYear();
-  const prettyDate = `${dd}/${mm}/${yyyy} ${timeVal}`;
+      const allSlots = (day >= 1 && day <= 5) ? weekdaySlots : (day === 6 ? saturdaySlots : []);
+      const booked = bookingsCache[dateStr] || [];
+      const available = allSlots.filter(s => !booked.includes(s));
 
-  const bodyLines = [
-    'Service: ' + serviceLabel,
-    'Name: ' + name,
-    'Phone: ' + phone,
-    'Email: ' + email,
-    'Preferred date/time: ' + prettyDate,
-    'Notes: ' + message,
-    '',
-    'Sent from: Elite Consulting & Services landing page'
-  ];
-  const body = encodeURIComponent(bodyLines.join('\n'));
+      if(available.length === 0){
+        alert(L[currentLang].noSlotsForDay);
+      }
 
-  window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
-});
-</script>
+      available.forEach(t=>{
+        const opt = document.createElement('option');
+        opt.value = t; opt.textContent = t;
+        timeSelect.appendChild(opt);
+      });
+    }
+
+    // On date change → rifresko oraret (pasi të kemi bookings)
+    dateInput.addEventListener('change', async e=>{
+      if(Object.keys(bookingsCache).length === 0){
+        await loadBookings();
+      }
+      populateTimeOptionsFor(e.target.value);
+    });
+
+    // Reset
+    resetBtn.addEventListener('click', ()=>{
+      ['name','phone','email','message'].forEach(id => document.getElementById(id).value='');
+      dateInput.value = '';
+      timeSelect.innerHTML = '<option value="" selected>—</option>';
+    });
+
+    // Gjuha
+    toggleLangBtn.addEventListener('click', ()=>{
+      currentLang = currentLang === 'sq' ? 'en' : 'sq';
+      const t = L[currentLang];
+      title.textContent = t.title;
+      subtitle.textContent = t.subtitle;
+      desc.textContent = t.desc;
+      labelService.textContent = t.service;
+      labelName.textContent = t.name;
+      labelPhone.textContent = t.phone;
+      labelEmail.textContent = t.email;
+      labelDate.textContent = t.date;
+      labelTime.textContent = t.time;
+      labelMessage.textContent = t.message;
+      sendBtn.textContent = t.send;
+      resetBtn.textContent = t.reset;
+      toggleLangBtn.textContent = currentLang==='sq' ? 'English' : 'Shqip';
+    });
+
+    // Dërgo me mailto (+ opsional: beacon regjistrimi)
+    sendBtn.addEventListener('click', ()=>{
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const dateVal = dateInput.value;
+      const timeVal = timeSelect.value;
+      const message = document.getElementById('message').value.trim();
+      const t = L[currentLang];
+
+      if(!name || !phone){ alert(t.needNamePhone); return; }
+      if(!dateVal){ alert(t.pickDateFirst); return; }
+
+      const day = new Date(dateVal + 'T00:00:00').getDay();
+      if(day === 0){ alert(t.noSlotsSun); return; }
+      if(!(day >= 1 && day <= 6)){ alert(t.invalidDay); return; }
+
+      if(!timeVal){ alert(t.needDateTime); return; }
+
+      // Sigurohu s'është i rezervuar (nëse dikush e rezervon ndërkohë)
+      const allowed = (day >= 1 && day <= 5) ? weekdaySlots : saturdaySlots;
+      const booked = bookingsCache[dateVal] || [];
+      if(!allowed.includes(timeVal) || booked.includes(timeVal)){
+        alert(t.noSlotsForDay); return;
+      }
+
+      const serviceLabel = selectedService==='real_estate' ? 'Real Estate' : 'UK Visa';
+      const subject = encodeURIComponent('New booking: '+serviceLabel+' — '+name);
+
+      // dd/mm/yyyy
+      const d = new Date(dateVal + 'T00:00:00');
+      const dd = String(d.getDate()).padStart(2,'0');
+      const mm = String(d.getMonth()+1).padStart(2,'0');
+      const yyyy = d.getFullYear();
+      const prettyDate = `${dd}/${mm}/${yyyy} ${timeVal}`;
+
+      const bodyLines = [
+        'Service: ' + serviceLabel,
+        'Name: ' + name,
+        'Phone: ' + phone,
+        'Email: ' + email,
+        'Preferred date/time: ' + prettyDate,
+        'Notes: ' + message,
+        '',
+        'Sent from: Elite Consulting & Services landing page'
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+
+      // (Opsionale) regjistro paraprakisht slotin si "pending"
+      if(BOOKING_BEACON_URL){
+        try{
+          const payload = new FormData();
+          payload.append('date', dateVal);
+          payload.append('time', timeVal);
+          payload.append('name', name);
+          payload.append('service', serviceLabel);
+          navigator.sendBeacon(BOOKING_BEACON_URL, payload);
+        }catch(e){}
+      }
+
+      // Hap klientin e email-it
+      window.location.href = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
 </body>
 </html>
